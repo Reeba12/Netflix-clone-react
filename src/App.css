@@ -1,38 +1,129 @@
-.App {
-  text-align: center;
-}
+@import url('https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap');
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'STIX Two Text', serif;
 }
+.App{
+  background-color: #222;
+  color: #ffff;
+  font-family: 'Netflix Sans','Helvetica Neue',Helvetica,Arial,sans-serif;
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.row{
+ /* padding: 30px; */
+  margin: 20px;
+}
+.row_poster_container{
   display: flex;
-  flex-direction: column;
+  overflow-y: hidden;
+  overflow-x: scroll;
+  padding:15px ;
+}
+.row_poster_container::-webkit-scrollbar{
+  display: none;
+}
+.row_poster{
+  object-fit: contain;
+  width: 100%;
+  max-height: 100px;
+  margin-right: 10px;
+transition: transform 450ms;
+}
+.row_poster:hover{
+  transform: scale(1.09);
+  opacity: 0.7;
+}
+.Navbar{
+  
+  display: flex;
+  justify-content: space-between;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  padding: 0 30px ;
+  max-height: 20em;
 }
 
-.App-link {
-  color: #61dafb;
+.logo{
+  fill: #e50914;
+  max-height: 2.5em;
+
+}
+.sign_in_btn{
+  height: 25px;
+  border: none;
+  border-radius: 5px;
+  padding-right: 1.5em;
+  padding-left: 1.5em;
+  background-color: #e50914;
+  color: #ffff;
+  cursor: pointer;
+  
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.large_poster{
+  max-height: 250px;
+}
+.large_poster:hover{
+  transform: scale(1.09);
+  opacity: 0.5;
+}
+.header{
+  font-family: 'STIX Two Text', serif;
+  object-fit: contain;
+  height: 27em;
+  display: grid;
+  align-items: center;
+
+}
+.banner_container{
+  margin: 20px;
+  padding: 10px;
+ width: 20rem;
+ 
+}
+.banner_btn{
+ cursor: pointer;
+ border: none;
+ background-color :rgba(0, 0, 0, 0.5);
+ font-weight: 800;
+  font-family: 'STIX Two Text', serif;
+ color:#fff;
+ padding: 0.5em 1.5em;
+ margin-right: 10px;
+ margin-bottom: 10px;
+ margin-top: 5px;
+    transition: transform 300ms;
+}
+.banner_btn:hover{
+ transform: translateY(-5px);
+ background-color: #fff ;
+ color: #000;
+}
+.banner_container h1{
+  font-weight: 800;
+  margin-top: 40px;
+}
+.banner_description{
+  font-size: 0.9em;
+}
+.fadeheader{
+  height: 9em;
+  background: linear-gradient(180deg, transparent, rgba(0, 0, 0, 0.67),#222);
+}
+.fadeheadertop{
+  height: 3em;
+  background: linear-gradient(0deg, transparent, rgba(0, 0, 0, 0.67),#222);
+}
+.vedio{
+  height: 300;
+  width: 600;
+
+}
+@media screen and (max-width: 657px) {
+  .vedio{
+    height: 300px;
+    width: 300px;
   }
 }
